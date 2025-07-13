@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">85,778</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">TestCases.RoomReservationTest</td><td><a href="#m0">checkAvailabilityTest_CheckOutDateLesserThanCheckInDate</a></td><td rowspan="1">1752436922643</td><td rowspan="1">1268</td></tr><tr class="failedeven"><td><a href="#m1">checkAvailabilityTest_backdatedCheckInAndCheckOutDate</a></td><td rowspan="1">1752436925787</td><td rowspan="1">1001</td></tr><tr class="failedodd"><td rowspan="1">TestCases.SendMessageTest</td><td><a href="#m2">SendMessage_Unsuccessful_NameContainsSpecialChar</a></td><td rowspan="1">1752436972774</td><td rowspan="1">20770</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestCases.RoomReservationTest</td><td><a href="#m3">successfulRoomReservation</a></td><td rowspan="1">1752436928425</td><td rowspan="1">18299</td></tr><tr class="passedodd"><td rowspan="3">TestCases.SendMessageTest</td><td><a href="#m4">SendMessage_Successful</a></td><td rowspan="1">1752436948197</td><td rowspan="1">10952</td></tr><tr class="passedodd"><td><a href="#m5">SendMessage_Unsuccessful_BlankName</a></td><td rowspan="1">1752436960555</td><td rowspan="1">10884</td></tr><tr class="passedodd"><td><a href="#m6">SendMessage_Unsuccessful_WrongEmailFormat</a></td><td rowspan="1">1752436995127</td><td rowspan="1">10879</td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">TestCases.RoomReservationTest#checkAvailabilityTest_CheckOutDateLesserThanCheckInDate</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{BackDatedCheckInMonth=July, CheckInYear=2025, CheckOutDay=10, CheckOutDayLesserThanCheckIn=8, FirstNameForReservation=Sonali, PhoneForReservation=01234567890, CheckOutMonth=August, CheckInMonth=August, BackDatedCheckInDay=7, CheckOutYear=2025, BackDatedCheckOutDay=8, EmailIDForReservation=testemail@gmail.com, BackDatedCheckOutMonth=July, CheckInDay=8, LastNameForReservation=TestLName}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Text not matching! expected [Check Out Date cannot be lesser than Check In Date] but found [Our Rooms]
+	at TestCases.RoomReservationTest.checkAvailabilityTest_CheckOutDateLesserThanCheckInDate(RoomReservationTest.java:216)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestCases.RoomReservationTest#checkAvailabilityTest_backdatedCheckInAndCheckOutDate</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{BackDatedCheckInMonth=July, CheckInYear=2025, CheckOutDay=10, CheckOutDayLesserThanCheckIn=8, FirstNameForReservation=Sonali, PhoneForReservation=01234567890, CheckOutMonth=August, CheckInMonth=August, BackDatedCheckInDay=7, CheckOutYear=2025, BackDatedCheckOutDay=8, EmailIDForReservation=testemail@gmail.com, BackDatedCheckOutMonth=July, CheckInDay=8, LastNameForReservation=TestLName}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Text not matching! expected [Check In date and Check Out date cannot be backdated.] but found [Our Rooms]
+	at TestCases.RoomReservationTest.checkAvailabilityTest_backdatedCheckInAndCheckOutDate(RoomReservationTest.java:170)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestCases.SendMessageTest#SendMessage_Unsuccessful_NameContainsSpecialChar</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{BlankName=, Email=sonali@gmail.com, PhoneNum=01234567890, MessageDescription=Test description Test description Test description Test description Test description, WrongEmailFormat=test.gmail.com, NameWithSpecialChar=Sonali@#, Subject=Test Subject, Name=Sonali}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.alert-danger p&quot;}
+  (Session info: chrome=138.0.7204.101)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3e4de70267bc6e322f7733c6bf8dd8a5, findElement {using=css selector, value=.alert-danger p}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.94 (545025748884..., userDataDir: C:\Users\samra\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62516}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62516/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e4de70267bc6e322f7733c6bf8dd8a5
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.getText(Unknown Source)
+	at PageObject.LandingPage.validateErrorMessage(LandingPage.java:313)
+	at TestCases.SendMessageTest.SendMessage_Unsuccessful_NameContainsSpecialChar(SendMessageTest.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestCases.RoomReservationTest#successfulRoomReservation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{BackDatedCheckInMonth=July, CheckInYear=2025, CheckOutDay=10, CheckOutDayLesserThanCheckIn=8, FirstNameForReservation=Sonali, PhoneForReservation=01234567890, CheckOutMonth=August, CheckInMonth=August, BackDatedCheckInDay=7, CheckOutYear=2025, BackDatedCheckOutDay=8, EmailIDForReservation=testemail@gmail.com, BackDatedCheckOutMonth=July, CheckInDay=8, LastNameForReservation=TestLName}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">TestCases.SendMessageTest#SendMessage_Successful</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{BlankName=, Email=sonali@gmail.com, PhoneNum=01234567890, MessageDescription=Test description Test description Test description Test description Test description, WrongEmailFormat=test.gmail.com, NameWithSpecialChar=Sonali@#, Subject=Test Subject, Name=Sonali}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">TestCases.SendMessageTest#SendMessage_Unsuccessful_BlankName</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{BlankName=, Email=sonali@gmail.com, PhoneNum=01234567890, MessageDescription=Test description Test description Test description Test description Test description, WrongEmailFormat=test.gmail.com, NameWithSpecialChar=Sonali@#, Subject=Test Subject, Name=Sonali}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">TestCases.SendMessageTest#SendMessage_Unsuccessful_WrongEmailFormat</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{BlankName=, Email=sonali@gmail.com, PhoneNum=01234567890, MessageDescription=Test description Test description Test description Test description Test description, WrongEmailFormat=test.gmail.com, NameWithSpecialChar=Sonali@#, Subject=Test Subject, Name=Sonali}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

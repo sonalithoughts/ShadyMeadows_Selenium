@@ -1,0 +1,21 @@
+[
+	
+	{
+		"CheckInDay": "8",
+		"CheckInMonth": "August",
+		"CheckInYear": "2025",
+		"CheckOutDay": "10",
+		"CheckOutMonth": "August",
+		"CheckOutYear": "2025",
+		"FirstNameForReservation": "Sonali",
+		"LastNameForReservation": "TestLName",
+		"EmailIDForReservation": "testemail@gmail.com",
+		"PhoneForReservation": "01234567890",
+		"BackDatedCheckInDay": "7",
+		"BackDatedCheckOutDay": "8",
+		"BackDatedCheckInMonth": "July",
+		"BackDatedCheckOutMonth": "July",
+		"CheckOutDayLesserThanCheckIn": "8"
+		
+	}
+]
